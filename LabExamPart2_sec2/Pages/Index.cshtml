@@ -1,0 +1,14 @@
+﻿@page
+@model LabExamPart2_sec2.Pages.IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+ 
+<form method="post" class="col-3">
+    <label >Username</label>
+    <input class="form-control" asp-for="@Model.uname" type="text"/>
+    <span class="text-danger" asp-validation-for="@Model.uname"></span>
+    <br />
+    <button class="btn btn-primary" type="submit">Sign In</button>
+    <span class="text-danger">@Model.warning</span>
+</form>
